@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Template.Model.FormerSchoolModels;
 
 namespace Template.Model.StudentModels
 {
@@ -18,7 +19,6 @@ namespace Template.Model.StudentModels
         public string TelephoneNumber { get; set; }
         public string Address { get; set; }
         public string Code { get; set; }
-
         public ICollection<FormerSchoolsViewModel> Schools { get; set; }
     }
 }

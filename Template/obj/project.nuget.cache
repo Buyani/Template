@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "URCgSSdCwxxEBUKugrgzHPW1OyZZnxZCglPzOVorRrwJn/CyFtjR54heaOXJDkUPQbhs8TZVAvOIx75flk6g3g==",
+  "dgSpecHash": "5knZqA+kcxD42+gz/aptUYqPVYCXNjX2zg3vYg5aSksjg/ohtikRRS7KzxtfetxV9xmfGd0/4G4vnZKjSstOLw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\Desktop\\Template\\Template\\Template.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\Source\\repos\\Template\\Template\\Template.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

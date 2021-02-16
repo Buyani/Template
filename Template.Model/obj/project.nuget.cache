@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bhz9iLFh6vdAstD0wQcnZjvPP+ltA5hdn0HySLKy61SiBI6CWZ6ARjP28C4xFrX3zvqWV1FtJCrgLYs1TmR0MQ==",
+  "dgSpecHash": "dk1kwOe6Bpy1AriRsN0jGP7ycLyRGeO+xzmApbx1t7Sm4lh1pLfWKj+k33cICZyrHbBNrEujUlYsRDcduhzwLg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\Desktop\\Template\\Template.Model\\Template.Model.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Model\\Template.Model.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

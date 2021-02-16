@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Template\\Template.Model\\Template.Model.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Model\\Template.Model.csproj",
       "projectName": "Template.Model",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\Template\\Template.Model\\Template.Model.csproj",
+      "projectPath": "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Model\\Template.Model.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\Template\\Template.Model\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Model\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

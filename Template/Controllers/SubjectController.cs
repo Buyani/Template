@@ -4,33 +4,30 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Template.Business.StudentBusiness;
-using Template.Model.StudentModels;
-using Template.Service.StudentService;
+using Template.Business.SubjectBusiness;
+using Template.Model.SubjectModels;
 
 namespace Template.Controllers
 {
-    public class StudentController : Controller
+    public class SubjectController : Controller
     {
-        // GET: StudentController
-        private readonly IStudentBusinessLogic _studentbusiness;
-        public StudentController(IStudentBusinessLogic studentbusiness)
+        private readonly ISubjectbusinessLogic _subjectbusiness;
+        public SubjectController(ISubjectbusinessLogic subjectbusiness)
         {
-            _studentbusiness = studentbusiness;
+            _subjectbusiness = subjectbusiness;
         }
         public async Task<ActionResult> Create()
         {
             return View();
         }
-
-        // POST: StudentController/Create
+        // POST: SubjectController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create(StudentModel model)
+        public async Task< ActionResult> Create(SubjectModel model)
         {
             try
             {
-                await _studentbusiness.InsertStudent(model);
+                await _subjectbusiness.InsertSubject(model);
                 return RedirectToAction(nameof(Index));
             }
             catch

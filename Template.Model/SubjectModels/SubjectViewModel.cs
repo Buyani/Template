@@ -4,7 +4,9 @@ using System.Text;
 
 namespace Template.Model.SubjectModels
 {
-    class SubjectViewModel
+    public class SubjectViewModel
     {
+        public int Id { get; set; }
+        public string Name { get; set; }
     }
 }

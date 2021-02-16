@@ -11,7 +11,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Template.Business.FormerSchoolBusiness;
 using Template.Business.StudentBusiness;
+using Template.Business.SubjectBusiness;
 using Template.Data;
 using Template.Service.FormerSchoolService;
 using Template.Service.GuardianService;
@@ -42,7 +44,12 @@ namespace Template
             services.AddTransient<IGuardianRepository, GuardianRepository>();
             services.AddTransient<IStudentSubjectRepository, StudentSubjectRepository>();
             services.AddTransient<ISubjectRepository, SubjectRepository>();
+
+
+            //Business Logis registration services
             services.AddTransient<IStudentBusinessLogic, StudentBusinessLogic>();
+            services.AddTransient<IFormerSchoolBusinessLogic, FormerSchoolBusinessLogic>();
+            services.AddTransient<ISubjectbusinessLogic, ISubjectbusinessLogic>();
             //*
             services.AddDbContext<MatricExcellenceDbContext>(options =>
                 options.UseSqlServer(
@@ -80,7 +87,7 @@ namespace Template
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Student}/{action=Create}/{id?}");
                 endpoints.MapRazorPages();
             });
         }

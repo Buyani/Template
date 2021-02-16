@@ -7665,11 +7665,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Template\\Template\\Template.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Source\\repos\\Template\\Template\\Template.csproj",
       "projectName": "Template",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\Template\\Template\\Template.csproj",
+      "projectPath": "C:\\Users\\Admin\\Source\\repos\\Template\\Template\\Template.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\Template\\Template\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Source\\repos\\Template\\Template\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -7691,14 +7691,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Admin\\Desktop\\Template\\Template.Business\\Template.Business.csproj": {
-              "projectPath": "C:\\Users\\Admin\\Desktop\\Template\\Template.Business\\Template.Business.csproj"
+            "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Business\\Template.Business.csproj": {
+              "projectPath": "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Business\\Template.Business.csproj"
             },
-            "C:\\Users\\Admin\\Desktop\\Template\\Template.Data\\Template.Data.csproj": {
-              "projectPath": "C:\\Users\\Admin\\Desktop\\Template\\Template.Data\\Template.Data.csproj"
+            "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Data\\Template.Data.csproj": {
+              "projectPath": "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Data\\Template.Data.csproj"
             },
-            "C:\\Users\\Admin\\Desktop\\Template\\Template.Model\\Template.Model.csproj": {
-              "projectPath": "C:\\Users\\Admin\\Desktop\\Template\\Template.Model\\Template.Model.csproj"
+            "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Model\\Template.Model.csproj": {
+              "projectPath": "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Model\\Template.Model.csproj"
             }
           }
         }

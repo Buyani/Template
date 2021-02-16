@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Desktop\\Template\\Template.Business\\Template.Business.csproj": {}
+    "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Business\\Template.Business.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Desktop\\Template\\Template.Business\\Template.Business.csproj": {
+    "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Business\\Template.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Template\\Template.Business\\Template.Business.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Business\\Template.Business.csproj",
         "projectName": "Template.Business",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\Template\\Template.Business\\Template.Business.csproj",
+        "projectPath": "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Business\\Template.Business.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\Template\\Template.Business\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Business\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -33,14 +33,14 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Admin\\Desktop\\Template\\Template.Core\\Template.Core.csproj": {
-                "projectPath": "C:\\Users\\Admin\\Desktop\\Template\\Template.Core\\Template.Core.csproj"
+              "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Core\\Template.Core.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Core\\Template.Core.csproj"
               },
-              "C:\\Users\\Admin\\Desktop\\Template\\Template.Model\\Template.Model.csproj": {
-                "projectPath": "C:\\Users\\Admin\\Desktop\\Template\\Template.Model\\Template.Model.csproj"
+              "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Model\\Template.Model.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Model\\Template.Model.csproj"
               },
-              "C:\\Users\\Admin\\Desktop\\Template\\Template.Service\\Template.Service.csproj": {
-                "projectPath": "C:\\Users\\Admin\\Desktop\\Template\\Template.Service\\Template.Service.csproj"
+              "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Service\\Template.Service.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Service\\Template.Service.csproj"
               }
             }
           }
@@ -73,14 +73,14 @@
         }
       }
     },
-    "C:\\Users\\Admin\\Desktop\\Template\\Template.Core\\Template.Core.csproj": {
+    "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Core\\Template.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Template\\Template.Core\\Template.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Core\\Template.Core.csproj",
         "projectName": "Template.Core",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\Template\\Template.Core\\Template.Core.csproj",
+        "projectPath": "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Core\\Template.Core.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\Template\\Template.Core\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -138,14 +138,14 @@
         }
       }
     },
-    "C:\\Users\\Admin\\Desktop\\Template\\Template.Data\\Template.Data.csproj": {
+    "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Data\\Template.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Template\\Template.Data\\Template.Data.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Data\\Template.Data.csproj",
         "projectName": "Template.Data",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\Template\\Template.Data\\Template.Data.csproj",
+        "projectPath": "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Data\\Template.Data.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\Template\\Template.Data\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -167,11 +167,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Admin\\Desktop\\Template\\Template.Core\\Template.Core.csproj": {
-                "projectPath": "C:\\Users\\Admin\\Desktop\\Template\\Template.Core\\Template.Core.csproj"
+              "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Core\\Template.Core.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Core\\Template.Core.csproj"
               },
-              "C:\\Users\\Admin\\Desktop\\Template\\Template.Model\\Template.Model.csproj": {
-                "projectPath": "C:\\Users\\Admin\\Desktop\\Template\\Template.Model\\Template.Model.csproj"
+              "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Model\\Template.Model.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Model\\Template.Model.csproj"
               }
             }
           }
@@ -224,14 +224,14 @@
         }
       }
     },
-    "C:\\Users\\Admin\\Desktop\\Template\\Template.Model\\Template.Model.csproj": {
+    "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Model\\Template.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Template\\Template.Model\\Template.Model.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Model\\Template.Model.csproj",
         "projectName": "Template.Model",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\Template\\Template.Model\\Template.Model.csproj",
+        "projectPath": "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Model\\Template.Model.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\Template\\Template.Model\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -283,14 +283,14 @@
         }
       }
     },
-    "C:\\Users\\Admin\\Desktop\\Template\\Template.Service\\Template.Service.csproj": {
+    "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Service\\Template.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Template\\Template.Service\\Template.Service.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Service\\Template.Service.csproj",
         "projectName": "Template.Service",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\Template\\Template.Service\\Template.Service.csproj",
+        "projectPath": "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Service\\Template.Service.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\Template\\Template.Service\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -312,11 +312,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Admin\\Desktop\\Template\\Template.Core\\Template.Core.csproj": {
-                "projectPath": "C:\\Users\\Admin\\Desktop\\Template\\Template.Core\\Template.Core.csproj"
+              "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Core\\Template.Core.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Core\\Template.Core.csproj"
               },
-              "C:\\Users\\Admin\\Desktop\\Template\\Template.Data\\Template.Data.csproj": {
-                "projectPath": "C:\\Users\\Admin\\Desktop\\Template\\Template.Data\\Template.Data.csproj"
+              "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Data\\Template.Data.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Source\\repos\\Template\\Template.Data\\Template.Data.csproj"
               }
             }
           }
