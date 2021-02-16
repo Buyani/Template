@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Template.Core\Template.Core.csproj" />
+    <ProjectReference Include="..\Template.Model\Template.Model.csproj" />
+    <ProjectReference Include="..\Template.Service\Template.Service.csproj" />
+  </ItemGroup>
+
+</Project>
