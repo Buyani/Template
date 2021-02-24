@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Template.Model.StudentModels.StudentViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+<div class="panel-body">
+    <div class="row">
+        <div class="panel">
+            <h3 class="panel-title">Student List</h3>
+            <div class="panel-heading">
+
+                @using (Html.BeginForm())
+                {
+                    <div class="row">
+                        <div class="form-group row">
+                            <div class="col-sm-2"><b>Search Identity</b></div>
+                            <div class="col-sm-4">@Html.TextBox("Search_Data", ViewBag.FilterValue as string, new { @class = "form-control col-sm-3" })</div>
+                            <div class="col-sm-4"> <input type="submit" value="Search Student" class="btn btn-info" />  </div>
+                        </div>
+
+                    </div>
+                }
+                <div class="right">
+                    <button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
+                    <button type="button" class="btn-remove"><i class="lnr lnr-cross"></i></button>
+                </div>
+            </div>
+            <div class="panel-body no-padding">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Identity</th>
+                            <th>
+                               Enrollment Date
+                            </th>
+                            <th>
+                                First Name
+                            </th>
+                            <th>Surname</th>
+                            <th>CellNumber</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.Identity</td>
+                                <td>@item.DateCreated</td>
+                                <td>
+                                    <a href="@Url.Action("StudentProfile","Student",new {Identity=item.Identity })">@item.FirstName</a>
+
+                                </td>
+                                <td>@item.Surname</td>
+                                <td>@item.CellNumber</td>
+                                <td>@item.Email</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <div class="panel-footer">
+                <div class="row">
+                    <div class="col-md-6 text-right"><a asp-action="Create" class="btn btn-success">Add New Student</a></div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>

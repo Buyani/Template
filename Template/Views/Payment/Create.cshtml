@@ -1,0 +1,55 @@
+﻿@using Template.Model.PaymentModels
+@model Template.Model.PaymentModels.PaymentModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<div class="panel-body">
+    <div class="panel-heading">
+        <div class="row">
+            <div class="col-md-6 text-right"><a asp-action="Index" class="btn btn-warning">Payments List</a></div>
+        </div>
+    </div>
+    <div class="row">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group row">
+                <div class="form-group col-sm-4">
+                    <label asp-for="StudentIdentity" class="control-label"></label>
+                    <input asp-for="StudentIdentity" id="txtStudents" class="form-control" />
+
+                    <span asp-validation-for="StudentIdentity" class="text-danger"></span>
+                </div>
+                <div class="form-group col-sm-3">
+                    <label asp-for="Amount" class="control-label"></label>
+                    <input asp-for="Amount" class="form-control" />
+                    <span asp-validation-for="Amount" class="text-danger"></span>
+                </div>
+                <div class="form-group col-sm-3">
+                    <label asp-for="Paymentmonth" class="control-label"></label>
+                    <select asp-for="Paymentmonth" class="form-control" asp-items="Html.GetEnumSelectList<MonthsEnum>()">
+                        <option>Select month ...</option>
+                    </select>
+                    <span asp-validation-for="Paymentmonth" class="text-danger"></span>
+                </div>
+                <div class="form-group col-sm-3">
+                    <label asp-for="Type" class="control-label"></label>
+                    <select asp-for="Type" class="form-control" asp-items="Html.GetEnumSelectList<PaymentTypeEnum>()">
+                        <option>Select type ...</option>
+                    </select>
+                    <span asp-validation-for="Type" class="text-danger"></span>
+                </div>
+            </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

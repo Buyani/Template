@@ -10,6 +10,6 @@ namespace Template.Core.Entities
         public string Name { get; set; }
         public string Description { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.Now;
-        public ICollection<StudentSubject> StudentSubjects { get; set; }
+        public ICollection<Enrollement> Enrollements { get; set; }
     }
 }

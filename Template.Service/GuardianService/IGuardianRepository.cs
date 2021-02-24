@@ -8,10 +8,10 @@ namespace Template.Service.GuardianService
 {
     public interface IGuardianRepository
     {
-        Task<Guardian> GetGuardianByIdAsync(int id);
-        Task<List<Guardian>> GetAllGuardiansAsync();
-        Task InsertGuardianAsync(Guardian guardian);
-        Task UpdateGuardianAsync(Guardian guardian);
-        Task DeleteGuardianAsync(Guardian guardian);
+        Task<Guardian> GetguardianByIdAsync(string id);
+        Task<List<Guardian>> GetAllguardiansAsync();
+        Task InsertguardianAsync(Guardian guardian);
+        Task UpdateguardianAsync(Guardian guardian);
+        Task DeleteguardianAsync(Guardian guardian);
     }
 }

@@ -7,3 +7,11 @@ C:\Users\Admin\Desktop\Template\Template.Core\obj\Debug\netcoreapp3.1\Template.C
 C:\Users\Admin\Desktop\Template\Template.Core\obj\Debug\netcoreapp3.1\Template.Core.dll
 C:\Users\Admin\Desktop\Template\Template.Core\obj\Debug\netcoreapp3.1\Template.Core.pdb
 C:\Users\Admin\Desktop\Template\Template.Core\obj\Debug\netcoreapp3.1\Template.Core.csprojAssemblyReference.cache
+C:\Users\Admin\Source\repos\Template\Template.Core\bin\Debug\netcoreapp3.1\Template.Core.deps.json
+C:\Users\Admin\Source\repos\Template\Template.Core\bin\Debug\netcoreapp3.1\Template.Core.dll
+C:\Users\Admin\Source\repos\Template\Template.Core\bin\Debug\netcoreapp3.1\Template.Core.pdb
+C:\Users\Admin\Source\repos\Template\Template.Core\obj\Debug\netcoreapp3.1\Template.Core.AssemblyInfoInputs.cache
+C:\Users\Admin\Source\repos\Template\Template.Core\obj\Debug\netcoreapp3.1\Template.Core.AssemblyInfo.cs
+C:\Users\Admin\Source\repos\Template\Template.Core\obj\Debug\netcoreapp3.1\Template.Core.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Source\repos\Template\Template.Core\obj\Debug\netcoreapp3.1\Template.Core.dll
+C:\Users\Admin\Source\repos\Template\Template.Core\obj\Debug\netcoreapp3.1\Template.Core.pdb

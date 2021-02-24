@@ -14,6 +14,10 @@ C:\Users\Admin\Desktop\Template\Template.Service\obj\Debug\netcoreapp3.1\Templat
 C:\Users\Admin\Desktop\Template\Template.Service\obj\Debug\netcoreapp3.1\Template.Service.csproj.CopyComplete
 C:\Users\Admin\Desktop\Template\Template.Service\obj\Debug\netcoreapp3.1\Template.Service.dll
 C:\Users\Admin\Desktop\Template\Template.Service\obj\Debug\netcoreapp3.1\Template.Service.pdb
+C:\Users\Admin\Source\repos\Template\Template.Service\obj\Debug\netcoreapp3.1\Template.Service.csprojAssemblyReference.cache
+C:\Users\Admin\Source\repos\Template\Template.Service\obj\Debug\netcoreapp3.1\Template.Service.AssemblyInfoInputs.cache
+C:\Users\Admin\Source\repos\Template\Template.Service\obj\Debug\netcoreapp3.1\Template.Service.AssemblyInfo.cs
+C:\Users\Admin\Source\repos\Template\Template.Service\obj\Debug\netcoreapp3.1\Template.Service.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Source\repos\Template\Template.Service\bin\Debug\netcoreapp3.1\Template.Service.deps.json
 C:\Users\Admin\Source\repos\Template\Template.Service\bin\Debug\netcoreapp3.1\Template.Service.dll
 C:\Users\Admin\Source\repos\Template\Template.Service\bin\Debug\netcoreapp3.1\Template.Service.pdb
@@ -23,10 +27,6 @@ C:\Users\Admin\Source\repos\Template\Template.Service\bin\Debug\netcoreapp3.1\Te
 C:\Users\Admin\Source\repos\Template\Template.Service\bin\Debug\netcoreapp3.1\Template.Core.pdb
 C:\Users\Admin\Source\repos\Template\Template.Service\bin\Debug\netcoreapp3.1\Template.Data.pdb
 C:\Users\Admin\Source\repos\Template\Template.Service\bin\Debug\netcoreapp3.1\Template.Model.pdb
-C:\Users\Admin\Source\repos\Template\Template.Service\obj\Debug\netcoreapp3.1\Template.Service.csprojAssemblyReference.cache
-C:\Users\Admin\Source\repos\Template\Template.Service\obj\Debug\netcoreapp3.1\Template.Service.AssemblyInfoInputs.cache
-C:\Users\Admin\Source\repos\Template\Template.Service\obj\Debug\netcoreapp3.1\Template.Service.AssemblyInfo.cs
-C:\Users\Admin\Source\repos\Template\Template.Service\obj\Debug\netcoreapp3.1\Template.Service.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Source\repos\Template\Template.Service\obj\Debug\netcoreapp3.1\Template.Service.csproj.CopyComplete
 C:\Users\Admin\Source\repos\Template\Template.Service\obj\Debug\netcoreapp3.1\Template.Service.dll
 C:\Users\Admin\Source\repos\Template\Template.Service\obj\Debug\netcoreapp3.1\Template.Service.pdb

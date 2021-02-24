@@ -7,7 +7,7 @@ using Template.Core.Entities;
 
 namespace Template.Data
 {
-    public class MatricExcellenceDbContext : IdentityDbContext<ApplicationUser>
+    public class MatricExcellenceDbContext : IdentityDbContext
     {
 
         public MatricExcellenceDbContext()
@@ -20,10 +20,10 @@ namespace Template.Data
         }
 
         public DbSet<Student> Students { get; set; }
-        public DbSet<StudentSubject> StudentSubjects { get; set; }
-        public DbSet<Guardian> Guradians { get; set; }
+        public DbSet<Enrollement> StudentSubjects { get; set; }
         public DbSet<Subject> Subjects { get; set; }
-        public DbSet<FormerSchool> FormerSchools { get; set; }
+        public DbSet<School> FormerSchools { get; set; }
+        public DbSet<Payment> Payments { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

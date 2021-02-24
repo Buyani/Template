@@ -8,5 +8,7 @@ namespace Template.Model.SubjectModels
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public string Description { get; set; }
+        public bool CheckboxAnswer { get; set; }
     }
 }

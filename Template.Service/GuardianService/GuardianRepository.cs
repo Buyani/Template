@@ -14,23 +14,23 @@ namespace Template.Service.GuardianService
             : base(context)
         {
         }
-        public async Task DeleteGuardianAsync(Guardian guardian)
+        public async Task DeleteguardianAsync(Guardian guardian)
         {
             await DeleteAsync(guardian);
         }
-        public async Task<List<Guardian>> GetAllGuardiansAsync()
+        public async Task<List<Guardian>> GetAllguardiansAsync()
         {
-            return await GetAll().ToListAsync();
+            return await GetAll().Include(p => p.Student).ToListAsync();
         }
-        public async Task<Guardian> GetGuardianByIdAsync(int id)
+        public async Task<Guardian> GetguardianByIdAsync(string id)
         {
-            return await GetAll().FirstOrDefaultAsync(p => p.Id.Equals(id));
+            return await GetAll().FirstOrDefaultAsync(p => p.Identity.Equals(id));
         }
-        public async Task InsertGuardianAsync(Guardian guardian)
+        public async Task InsertguardianAsync(Guardian guardian)
         {
             await AddAsync(guardian);
         }
-        public async Task UpdateGuardianAsync(Guardian guardian)
+        public async Task UpdateguardianAsync(Guardian guardian)
         {
             await UpdateAsync(guardian);
         }

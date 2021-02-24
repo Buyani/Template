@@ -7,5 +7,6 @@ namespace Template.Model.SubjectModels
     public class SubjectModel
     {
         public string Name { get; set; }
+        public string Description { get; set; }
     }
 }

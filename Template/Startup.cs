@@ -1,24 +1,24 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using ReflectionIT.Mvc.Paging;
+using Template.Business.AccountBusiness;
+using Template.Business.EnrollementBusiness;
 using Template.Business.FormerSchoolBusiness;
+using Template.Business.GuardianBusiness;
+using Template.Business.PaymentBusiness;
 using Template.Business.StudentBusiness;
 using Template.Business.SubjectBusiness;
 using Template.Data;
-using Template.Service.FormerSchoolService;
+using Template.Service.EnrollementService;
 using Template.Service.GuardianService;
+using Template.Service.PaymentService;
+using Template.Service.SchoolService;
 using Template.Service.StudentService;
-using Template.Service.StudentSubjectService;
 using Template.Service.SubjectService;
 
 namespace Template
@@ -35,21 +35,29 @@ namespace Template
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //Register aoutomappers here
-            services.AddAutoMapper(typeof(Startup));
+            
+
             //register services here
             services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
             services.AddTransient<IStudentRepository, StudentRepository>();
-            services.AddTransient<IFormerSchoolRepository, FormerSchoolRerpository>();
+            services.AddTransient<IPaymentRepository, PaymentRepository>();
+            services.AddTransient<ISchoolRepository, SchoolRerpository>();
+            services.AddTransient<IEnrollementRepository, EnrollementRepository>();
             services.AddTransient<IGuardianRepository, GuardianRepository>();
-            services.AddTransient<IStudentSubjectRepository, StudentSubjectRepository>();
             services.AddTransient<ISubjectRepository, SubjectRepository>();
 
 
             //Business Logis registration services
             services.AddTransient<IStudentBusinessLogic, StudentBusinessLogic>();
-            services.AddTransient<IFormerSchoolBusinessLogic, FormerSchoolBusinessLogic>();
-            services.AddTransient<ISubjectbusinessLogic, ISubjectbusinessLogic>();
+            services.AddTransient<ISchoolBusinessLogic, SchoolBusinessLogic>();
+            services.AddTransient<ISubjectbusinessLogic, SubjectbusinessLogic>();
+            services.AddTransient<IPaymentBusinessLogic, PaymentBusinessLogic>();
+            services.AddTransient<IEnrollementBusinessLogic, EnrollementBusinessLogic>();
+            services.AddTransient<IGuardianBusinessLogic, GuardianBusinessLogic>();
+
+
+            services.AddTransient<IRegisterBusiness, RegisterBusiness>();
+            services.AddTransient< ILogInBusiness,LogInBusiness>();
             //*
             services.AddDbContext<MatricExcellenceDbContext>(options =>
                 options.UseSqlServer(
@@ -58,7 +66,20 @@ namespace Template
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<MatricExcellenceDbContext>();
+
+            services.Configure<PasswordHasherOptions>(options =>
+    options.CompatibilityMode = PasswordHasherCompatibilityMode.IdentityV3);
+
             services.AddControllersWithViews();
+            services.AddPaging();
+
+
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = $"/account/login";
+                options.LogoutPath = $"/account/logout";
+                options.AccessDeniedPath = $"/account/accessDenied";
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -87,7 +108,7 @@ namespace Template
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Student}/{action=Create}/{id?}");
+                    pattern: "{controller=Student}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
         }

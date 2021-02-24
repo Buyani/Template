@@ -19,16 +19,17 @@ namespace Template.Service.StudentService
         {
             await DeleteAsync(student);
         }
-
         public async Task<List<Student>> GetAllStudentsAsync()
         {
             return await GetAll().ToListAsync();
         }
         public async Task<Student> GetStudentByIdAsync(string id)
         {
-            return await GetAll().FirstOrDefaultAsync(p => p.Identity.Equals(id));
+            return await GetAll()
+                .Include(p=>p.Enrollements)
+                .Include(p=>p.Payments)
+                .FirstOrDefaultAsync(p => p.Identity.Equals(id));
         }
-
         public async Task InsertStudentAsync(Student student)
         {
             await AddAsync(student);

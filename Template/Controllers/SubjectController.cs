@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -9,12 +10,17 @@ using Template.Model.SubjectModels;
 
 namespace Template.Controllers
 {
+
     public class SubjectController : Controller
     {
         private readonly ISubjectbusinessLogic _subjectbusiness;
         public SubjectController(ISubjectbusinessLogic subjectbusiness)
         {
             _subjectbusiness = subjectbusiness;
+        }
+        public async Task<ActionResult>Index()
+        {
+            return View(await _subjectbusiness.AllSubjects());
         }
         public async Task<ActionResult> Create()
         {

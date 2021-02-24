@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template", "Template\Template.csproj", "{8CCB930E-D6DB-47E4-96BE-C0F4C5E08803}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template", "Template\Template.csproj", "{8CCB930E-D6DB-47E4-96BE-C0F4C5E08803}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template.Data", "Template.Data\Template.Data.csproj", "{0F7F00FF-6262-4996-BD30-0E273A4C08D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template.Data", "Template.Data\Template.Data.csproj", "{0F7F00FF-6262-4996-BD30-0E273A4C08D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template.Service", "Template.Service\Template.Service.csproj", "{A802C64C-42BA-457C-9415-024398E00DA1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template.Service", "Template.Service\Template.Service.csproj", "{A802C64C-42BA-457C-9415-024398E00DA1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template.Model", "Template.Model\Template.Model.csproj", "{5EA18A33-31C7-49D7-8C15-AA27C0795E6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template.Model", "Template.Model\Template.Model.csproj", "{5EA18A33-31C7-49D7-8C15-AA27C0795E6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template.Business", "Template.Business\Template.Business.csproj", "{27EC2511-6A3A-46F3-858C-B31F915D827D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template.Business", "Template.Business\Template.Business.csproj", "{27EC2511-6A3A-46F3-858C-B31F915D827D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template.Core", "Template.Core\Template.Core.csproj", "{82D3B97A-93EC-4B83-AD37-E92F5E3384DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template.Core", "Template.Core\Template.Core.csproj", "{82D3B97A-93EC-4B83-AD37-E92F5E3384DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template.UnitTest", "Template.UnitTest\Template.UnitTest.csproj", "{6E99EF3D-B33F-4112-8C81-D1C80C0EF317}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{82D3B97A-93EC-4B83-AD37-E92F5E3384DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82D3B97A-93EC-4B83-AD37-E92F5E3384DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82D3B97A-93EC-4B83-AD37-E92F5E3384DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E99EF3D-B33F-4112-8C81-D1C80C0EF317}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E99EF3D-B33F-4112-8C81-D1C80C0EF317}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E99EF3D-B33F-4112-8C81-D1C80C0EF317}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E99EF3D-B33F-4112-8C81-D1C80C0EF317}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
