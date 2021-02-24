@@ -81,7 +81,7 @@ namespace Template.Business.StudentBusiness
                 FirstName = student.FirstName,
                 Identity = student.Identity,
                 Nationality = student.Nationality,
-                Payments = student.Payments.Where(p => p.StudentIdentity.Equals(Identity)).Select(p => new PaymentViewModel
+                Payments = student.Payments.Select(p => new PaymentViewModel
                 {
                     Id = p.Id,
                     Amount = p.Amount,
@@ -90,7 +90,7 @@ namespace Template.Business.StudentBusiness
                     Month = p.Month
 
                 }).ToList(),
-                Enrollements = student.Enrollements.Where(p => p.StudentIdentity.Equals(Identity)).Select(p => new SubjectViewModel
+                Enrollements = student.Enrollements.Select(p => new SubjectViewModel
                 {
                     Id=p.Id,
                     Name=p.Subject.Name,
