@@ -11,6 +11,7 @@ namespace Template.Business.AccountBusiness
     {
         private readonly UserManager<IdentityUser> _userManager;
         private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly RoleManager<IdentityUser> _roleManager;
 
         public RegisterBusiness(UserManager<IdentityUser> userManager,
                               SignInManager<IdentityUser> signInManager)
@@ -41,6 +42,24 @@ namespace Template.Business.AccountBusiness
                 return true;
             }
             return false;
+        }
+        public async Task<bool> CreateRole(string rolename)
+        {
+            if(!await _roleManager.RoleExistsAsync(rolename))
+            {
+                 await _roleManager.CreateAsync(new IdentityUser(rolename));
+                return true;
+            }
+            return false;
+        }
+        public async Task<bool> AddUserToRole(string role,IdentityUser user)
+        {
+            if(! await _roleManager.RoleExistsAsync(role))
+            {
+                return false;
+            }
+            await _userManager.AddToRoleAsync(user, role);
+            return true;
         }
     }
 }
