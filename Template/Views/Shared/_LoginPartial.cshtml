@@ -2,19 +2,28 @@
 @inject SignInManager<IdentityUser> SignInManager
 @inject UserManager<IdentityUser> UserManager
 
-<ul class="navbar-nav">
-    @if (SignInManager.IsSignedIn(User))
-    {
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span>@User.Identity.Name</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
-            <ul class="dropdown-menu">
-                <li>
-                    <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-                        <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
-                    </form>
+        @if (SignInManager.IsSignedIn(User))
+        {
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span>administrator</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="@Url.Action("LogIn", "Account", new { area = "" })"><i class="lnr lnr-exit"></i> <span>Logout</span></a></li>
+                    </ul>
                 </li>
             </ul>
+        }
 
-        </li>
-    }
+
+
+
+
+
+
+
+
+
+
+
+
 

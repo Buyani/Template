@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ using Template.Model.StudentModels;
 
 namespace Template.Controllers
 {
+    [Authorize]
     public class PaymentController : Controller
     {
         private readonly IPaymentBusinessLogic _paymentbusiness;
@@ -23,9 +25,13 @@ namespace Template.Controllers
 
         }
         // GET: PaymentController/Create
-        public ActionResult Create()
-        {           
-            return View();
+        public ActionResult Create(string Identity)
+        {
+            var payemnt = new PaymentModel
+            {
+                StudentIdentity = Identity
+            };
+            return View(payemnt);
         }
         // POST: PaymentController/Create
         [HttpPost]

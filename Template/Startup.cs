@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -14,6 +15,7 @@ using Template.Business.PaymentBusiness;
 using Template.Business.StudentBusiness;
 using Template.Business.SubjectBusiness;
 using Template.Data;
+using Template.Model;
 using Template.Service.EnrollementService;
 using Template.Service.GuardianService;
 using Template.Service.PaymentService;
@@ -68,10 +70,15 @@ namespace Template
                 .AddEntityFrameworkStores<MatricExcellenceDbContext>();
 
             services.Configure<PasswordHasherOptions>(options =>
-    options.CompatibilityMode = PasswordHasherCompatibilityMode.IdentityV3);
+                options.CompatibilityMode = PasswordHasherCompatibilityMode.IdentityV3);
 
             services.AddControllersWithViews();
             services.AddPaging();
+
+            // requires:
+            // using AspNetCoreEmailConfirmationSendGrid.Services;
+            // using Microsoft.AspNetCore.Identity.UI.Services;
+            services.AddTransient<IEmailSender, EmailSender>();
 
 
             services.ConfigureApplicationCookie(options =>
@@ -80,6 +87,8 @@ namespace Template
                 options.LogoutPath = $"/account/logout";
                 options.AccessDeniedPath = $"/account/accessDenied";
             });
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

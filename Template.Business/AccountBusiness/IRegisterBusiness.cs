@@ -8,7 +8,7 @@ namespace Template.Business.AccountBusiness
 {
     public interface IRegisterBusiness
     {
-        Task<bool> Register(RegisterViewModel model);
+        Task<RegistrationToken> Register(RegisterViewModel model);
         Task<bool> FindUser(string userName);
     }
 }

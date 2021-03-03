@@ -25,7 +25,7 @@ namespace Template.Model.StudentModels
         public GuardianViewModel Parent { get; set; }
         public SchoolsViewModel School { get; set; }
         public ICollection<PaymentViewModel> Payments { get; set; }
-        public ICollection<SubjectViewModel> Enrollements { get; set; }
+        public ICollection<EnrollementViewModel> Enrollements { get; set; }
 
 
     }

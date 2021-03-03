@@ -23,7 +23,7 @@ namespace Template.Service.SubjectService
         {
             return await GetAll().ToListAsync();
         }
-        public async Task<Subject> GetSubjectByIdAsync(string id)
+        public async Task<Subject> GetSubjectByIdAsync(int id)
         {
             return await GetAll().FirstOrDefaultAsync(p=>p.Id.Equals(id));;
         }

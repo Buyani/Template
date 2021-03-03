@@ -10,7 +10,7 @@ using Template.Model.SubjectModels;
 
 namespace Template.Controllers
 {
-
+    [Authorize]
     public class SubjectController : Controller
     {
         private readonly ISubjectbusinessLogic _subjectbusiness;
@@ -33,6 +33,11 @@ namespace Template.Controllers
         {
             try
             {
+                if(!ModelState.IsValid)
+                {
+                    ModelState.AddModelError("", "make sure all fields are filled");
+                    return View(model);
+                }
                 await _subjectbusiness.InsertSubject(model);
                 return RedirectToAction(nameof(Index));
             }

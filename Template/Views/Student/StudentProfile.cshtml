@@ -4,6 +4,7 @@
     ViewData["Title"] = "StudentProfile";
     Layout = "~/Views/Shared/_Admin.cshtml";
 }
+<div class="panel-body">
     <div class="main-content">
         <div class="container-fluid">
             <div class="panel panel-profile">
@@ -15,27 +16,17 @@
                                 <h3 class="name">@Model.FirstName</h3>
                                 <span class="online-status status-available">Active</span>
                             </div>
-                            <div class="profile-stat">
-                                <div class="row">
-                                    <div class="col-md-4 stat-item">
-                                       Age<span>age</span>
-                                    </div>
-                                    <div class="col-md-4 stat-item">
-                                        Date of birth <span>dob</span>
-                                    </div>
-                                    <div class="col-md-4 stat-item">
-                                        Gender<span>here</span>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
+
+
+
                         <div class="profile-detail">
                             <div class="profile-info">
                                 <h4 class="heading">Student Info</h4>
                                 <ul class="list-unstyled list-justify">
                                     <li>Identity <span>@Model.Identity</span></li>
                                     <li>Mobile <span>@Model.CellNumber</span></li>
-                                    <li>Email <span>@Model.Email</span></li>                                  
+                                    <li>Email <span>@Model.Email</span></li>
                                 </ul>
                             </div>
                             <div class="profile-info">
@@ -55,7 +46,6 @@
                                     <li>Contact Number <span>@Model.Parent.CellPhone</a></span></li>
                                 </ul>
                             </div>
-                            <div class="text-center"><a href="#" class="btn btn-primary">Edit Profile</a></div>
                         </div>
                         <!-- END PROFILE DETAIL -->
                     </div>
@@ -91,36 +81,36 @@
                                     </table>
                                 </div>
                             </div>
-                            <div class="text-center"><a href="#" class="btn btn-default">Make Payment</a></div>
+                            <div class="text-center"><a href="@Url.Action("Create","Payment",new {Identity=Model.Identity })" class="btn btn-primary btn-lg">New Payment</a></div>
                         </div>
                         <div class="custom-tabs-line tabs-line-bottom left-aligned">
                             <ul class="nav" role="tablist">
-                                <li class="active"><a href="#tab-bottom-left1" role="tab" data-toggle="tab">Students Subjects</a></li>                           
+                                <li class="active"><a href="#tab-bottom-left1" role="tab" data-toggle="tab">Students Subjects</a></li>
                             </ul>
                         </div>
                         <div class="tab-content">
-                            <div class="tab-pane">
-                                <div class="table-responsive">
-                                    <table class="table project-table">
-                                        <thead>
-                                            <tr>
-                                                <th>Subject Name</th>
-                                                <th>Description</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            @foreach (var item in Model.Enrollements)
-                                            {
 
-                                                <tr>
-                                                    <td>@item.Name</td>
-                                                    <td>@item.Description</td>
-                                                </tr>
-                                            }
-                                        </tbody>
-                                    </table>
-                                </div>
+                            <div class="table-responsive">
+                                <table class="table project-table">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Name</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model.Enrollements)
+                                        {
+
+                                            <tr>
+                                                <td>@item.Id</td>
+                                                <td>@item.Name</td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
                             </div>
+
 
                         </div>
                     </div>
@@ -128,5 +118,6 @@
             </div>
         </div>
     </div>
+   </div>
 
 

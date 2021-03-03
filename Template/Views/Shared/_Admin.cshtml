@@ -28,16 +28,14 @@
         <!-- NAVBAR -->
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="brand">
-                Matric Excellence
+                Admin
             </div>
             <div class="container-fluid">
                 <div class="navbar-btn">
                     <button type="button" class="btn-toggle-fullwidth"><i class="lnr lnr-arrow-left-circle"></i></button>
                 </div>
                 <div id="navbar-menu">
-                    <ul class="nav navbar-nav navbar-right">
-                        <partial name="_LoginPartial">
-                    </ul>
+                    <partial name="_LoginPartial">
                 </div>
             </div>
         </nav>
@@ -47,23 +45,21 @@
             <div class="sidebar-scroll">
                 <nav>
                     <ul class="nav">
-                        <li><a href="@Url.Action("Index", "Student")" class="active"><i class="lnr lnr-dice"></i>  <span>Dashboard</span></a></li>
-                        <li><a href="@Url.Action("Index", "Student")" class=""><i class="lnr lnr-dice"></i>  <span>Students</span></a></li>
-                        <li><a href="@Url.Action("Index", "Subject")" class=""><i class="lnr lnr-dice"></i> <span>Subjects</span></a></li>
-                        <li><a href="@Url.Action("Index", "Payment")" class=""><i class="lnr lnr-dice"></i>  <span>Payments</span></a></li>
+                        <li><a href="@Url.Action("Index", "Student")" class="active"><i class="lnr lnr-home"></i>  <span>Dashboard</span></a></li>
+                        <li><a href="@Url.Action("Index", "Student")" class=""><i class="lnr lnr-users"></i>  <span>Students</span></a></li>
+                        <li><a href="@Url.Action("Index", "Subject")" class=""><i class="lnr lnr-book"></i> <span>Subjects</span></a></li>
                     </ul>
                 </nav>
             </div>
         </div>
         <!-- END LEFT SIDEBAR -->
         <!-- MAIN -->
-        <div class="main">
+        <div class="main " style="background-color:aquamarine">
             <!-- MAIN CONTENT -->
             <div class="main-content">
                 <div class="container-fluid">
                     <!-- OVERVIEW -->
                     <div class="panel panel-headline">
-
                         @RenderBody()
                     </div>
                     <!-- END OVERVIEW -->

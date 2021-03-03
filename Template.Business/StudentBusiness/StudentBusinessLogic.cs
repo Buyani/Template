@@ -11,7 +11,7 @@ using Template.Service.EnrollementService;
 using Template.Service.GuardianService;
 using Template.Service.SchoolService;
 using Template.Service.StudentService;
-
+using Template.Service.SubjectService;
 
 namespace Template.Business.StudentBusiness
 {
@@ -20,13 +20,15 @@ namespace Template.Business.StudentBusiness
         private readonly IStudentRepository _studentservice;
         private readonly ISchoolRepository _schoolservice;
         private readonly IGuardianRepository _guardianservice;
+        private readonly ISubjectRepository _subjectservice;
 
         public StudentBusinessLogic(IStudentRepository studentservice , ISchoolRepository schoolservice, 
-            IGuardianRepository guardianservice)
+            IGuardianRepository guardianservice, ISubjectRepository subjectservice)
         {
             _studentservice = studentservice;
             _schoolservice = schoolservice;
             _guardianservice = guardianservice;
+            _subjectservice = subjectservice;
         }
         public async Task<string> InsertStudentAsync(StudentModel model, string GuardianIdentity,int SchoolId)
         {
@@ -71,7 +73,7 @@ namespace Template.Business.StudentBusiness
         public async Task<StudentViewModel> GetStudentByIdentityAsync(string Identity)
         {
             var student =await  _studentservice.GetStudentByIdAsync(Identity);
-            var studentdetails=new  StudentViewModel
+            var studentdetails = new StudentViewModel
             {
                 Address = student.Address,
                 CellNumber = student.CellNumber,
@@ -79,6 +81,8 @@ namespace Template.Business.StudentBusiness
                 DateCreated = student.CreatedAt,
                 Email = student.Email,
                 FirstName = student.FirstName,
+                Surname = student.Surname,
+                TelephoneNumber = student.TelephoneNumber,
                 Identity = student.Identity,
                 Nationality = student.Nationality,
                 Payments = student.Payments.Select(p => new PaymentViewModel
@@ -90,16 +94,10 @@ namespace Template.Business.StudentBusiness
                     Month = p.Month
 
                 }).ToList(),
-                Enrollements = student.Enrollements.Select(p => new SubjectViewModel
-                {
-                    Id=p.Id,
-                    Name=p.Subject.Name,
-                    Description=p.Subject.Description
-                }).ToList(),
+                Enrollements =await  GetStudentSubjectsAsync(student.Enrollements),
 
-                Parent= await GetStudentGuradrianAsync(student.Guradian_Identity),
+                Parent = await GetStudentGuradrianAsync(student.Guradian_Identity),
                 School=await GetStudentSchoolAsync(student.SchoolId)
-
             };
             return  studentdetails;
         }
@@ -140,5 +138,21 @@ namespace Template.Business.StudentBusiness
             };
 
         }
+        public async Task<List<EnrollementViewModel>> GetStudentSubjectsAsync(ICollection<Enrollement> enrollements)
+        {
+            var list = new List<EnrollementViewModel>();
+            foreach(var enrol in enrollements)
+            {
+                var subject = await _subjectservice.GetSubjectByIdAsync(enrol.SubjectId);
+                list.Add(
+                    new EnrollementViewModel
+                    {
+                        Id = enrol.Id,
+                        Name = subject.Name
+                    });                   
+            }
+            return list;
+        }
+
     }
 }

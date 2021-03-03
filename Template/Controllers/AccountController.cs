@@ -25,6 +25,8 @@ namespace Template.Controllers
         }
 
         [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Register(RegisterViewModel model)
         {
             if(ModelState.IsValid)
@@ -37,9 +39,9 @@ namespace Template.Controllers
 
                 var result = await _registerbusiness.Register(model);
 
-                if (result)
+                if (result.Results)
                 {
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "Student");
                 }
                 else
                 {

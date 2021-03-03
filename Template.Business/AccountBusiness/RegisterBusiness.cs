@@ -18,18 +18,19 @@ namespace Template.Business.AccountBusiness
             _userManager = userManager;
             _signInManager = signInManager;
         }
-
-        public async Task<bool> Register(RegisterViewModel model)
+        public async Task<RegistrationToken> Register(RegisterViewModel model)
         {
-            var user = new IdentityUser {UserName = model.Email,Email = model.Email};
-
+            var user = new IdentityUser {UserName = model.Email,Email = model.Email,EmailConfirmed=true};
+            var token = new RegistrationToken();
             var result = await _userManager.CreateAsync(user, model.Password);
             if (result.Succeeded)
             {
-                await _signInManager.SignInAsync(user, isPersistent: false);
-                return true;
+                //await _signInManager.SignInAsync(user, isPersistent: false);
+                token.Results = true;
+                token.EmailConfimationToken = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                token.User = user;
             }
-            return false;
+            return token;
         }
         public async Task<bool> FindUser(string userName)
         {

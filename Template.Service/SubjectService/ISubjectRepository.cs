@@ -8,7 +8,7 @@ namespace Template.Service.SubjectService
 {
     public interface ISubjectRepository
     {
-        Task<Subject> GetSubjectByIdAsync(string id);
+        Task<Subject> GetSubjectByIdAsync(int id);
         Task<List<Subject>> GetAllSubjectAsync();
         Task UpdatteSubject(Subject model);
         Task InsertSubjectAsync(Subject subject);

@@ -16,7 +16,7 @@ using Template.Service.StudentService;
 
 namespace Template.Controllers
 {
-
+    [Authorize]
     public class StudentController : Controller
     {
         // GET: StudentController
